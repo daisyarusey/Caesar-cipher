@@ -3,7 +3,7 @@ public class Encrypt {
     private String text;
     private int key;
     private String errorMessage="";
-public  String encrypt(String text,int key){
+public  String Encrypt(String text,int key){
 this.text = text;
 this.key= key;
 

@@ -6,10 +6,13 @@ public class EncryptTest {
     @Test
     public void encrypt_encryptText_String(){
         Encrypt testEncrypt = new Encrypt();
-        String expectedOutput = "JK";
-        assertEquals(expectedOutput,testEncrypt.encrypt("HI",2));
+        assertEquals("JK", testEncrypt.Encrypt("HI",2));
     }
 
-
+    @Test
+    public void encrypt_instantiatesCorrectly_true() {
+        Encrypt testCaesar = new Encrypt();
+        assertTrue(testCaesar instanceof Encrypt);
+    }
 
 }
