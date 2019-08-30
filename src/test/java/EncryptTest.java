@@ -15,4 +15,9 @@ public class EncryptTest {
         assertTrue(testCaesar instanceof Encrypt);
     }
 
+    @Test
+    public void encrypt_testErrorMessage_String(){
+        Encrypt testError =new Encrypt();
+        assertEquals("Key must be between 0 and 25",testError.Encrypt("HI",28));
+    }
 }

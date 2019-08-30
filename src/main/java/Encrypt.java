@@ -3,18 +3,23 @@ public class Encrypt {
     private String text;
     private int key;
     private String errorMessage="";
+
 public  String Encrypt(String text,int key){
 this.text = text;
 this.key= key;
-
+if (key<1 || key>25){
+    errorMessage= "Key must be between 0 and 25";
+}else {
     for (int i = 0; i < text.length(); i++) {
         char ch = text.charAt(i);
         char shifted = (char) (ch + key);
         cipher += shifted;
     }
-
     return cipher;
 }
+ return errorMessage;
+}
+
 
 public int getKey(){
 
