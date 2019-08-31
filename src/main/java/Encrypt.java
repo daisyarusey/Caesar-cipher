@@ -4,7 +4,7 @@ public class Encrypt {
     private int key;
     private String errorMessage="";
 
-public  String Encrypt(String text,int key){
+public Encrypt(String text, int key){
 this.text = text;
 this.key= key;
 if (key<1 || key>25){
@@ -15,13 +15,14 @@ if (key<1 || key>25){
         char shifted = (char) (ch + key);
         cipher += shifted;
     }
-    return cipher;
+
 }
- return errorMessage;
+
 }
 
 
-public int getKey(){
+
+    public int getKey(){
 
     return key;
 }
