@@ -9,6 +9,11 @@ public class Decrypt {
             errorMessage= "Key must be between 0 and 25";
         }
         else {
+            for (int i = 0; i < encryptedText.length(); i++) {
+                char ch = encryptedText.charAt(i);
+                char shifted = (char) (ch - decryptKey);
+                decipher += shifted;
+            }
 
         }
     }
@@ -24,5 +29,10 @@ public class Decrypt {
 
     public String getEncryptedText() {
         return encryptedText;
+    }
+
+    public String setDecipher(){
+
+        return decipher;
     }
 }

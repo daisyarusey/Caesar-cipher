@@ -27,12 +27,16 @@ if (key<1 || key>25){
     return key;
 }
 public String getText(){
+
     return text;
 }
 public String setCipher(){
+
     return cipher;
     }
+
     public String setErrorMessage(){
+
     return errorMessage;
     }
 
