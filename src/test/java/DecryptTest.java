@@ -1,3 +1,4 @@
+import models.Decrypt;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
