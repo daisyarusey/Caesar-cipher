@@ -26,6 +26,10 @@ public class App {
             String encryptedText = myScanner.next();
             System.out.println("Enter the shift key");
             int decryptKey = myScanner.nextInt();
+
+            Decrypt decrypt = new Decrypt(encryptedText,decryptKey);
+            String decipher = decrypt.setDecipher();
+            System.out.println("Here is your decrypted text:"+" "+ decipher);
         }else {
             System.out.println("Invalid input");
 
