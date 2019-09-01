@@ -3,7 +3,7 @@ package models;
 public class Decrypt {
     private String decipher="";
     private String encryptedText;
-    private int decryptKey=2;
+    private int decryptKey;
     private String errorMessage="";
     public Decrypt(String encryptedText, int decryptKey){
 
@@ -25,9 +25,6 @@ public class Decrypt {
         return errorMessage;
     }
 
-    public void setEncryptedText(String encryptedText) {
-        this.encryptedText = encryptedText;
-    }
 
     public String getEncryptedText() {
         return encryptedText;

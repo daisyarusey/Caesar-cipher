@@ -23,15 +23,6 @@ if (key<1 || key>25){
 }
 
 
-
-    public int getKey(){
-
-    return key;
-}
-public String getText(){
-
-    return text;
-}
 public String setCipher(){
 
     return cipher;
