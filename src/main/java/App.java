@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import models.Encrypt;
+import models.Decrypt;
 
 public class App {
     public static void main(String[] args) {
@@ -15,6 +17,8 @@ public class App {
             System.out.println("Enter shift key");
             int key = myScanner.nextInt();
 
+
+
         } else if (choice.equalsIgnoreCase("decrypt")) {
             System.out.println("Enter encrypted text");
             String encryptedText = myScanner.next();
@@ -26,10 +30,7 @@ public class App {
         }
     }
 
-
-
-
-    }
+}
 
 
 
