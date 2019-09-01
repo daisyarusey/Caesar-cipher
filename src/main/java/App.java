@@ -5,10 +5,26 @@ public class App {
 
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Welcome to  Ceaser Cipher ");
-        System.out.println("Enter text to encrypt");
-        String text = myScanner.nextLine();
-        System.out.println("Enter shift key");
-        int key =myScanner.nextInt();
+        System.out.println("Do you want to encrypt or decrypt?");
+        String choice = myScanner.next();
+
+        if (choice.equals("encrypt")) {
+            System.out.println("Let's now encrypt your text");
+            System.out.println("Enter text to encrypt");
+            String text = myScanner.next();
+            System.out.println("Enter shift key");
+            int key = myScanner.nextInt();
+
+        } else if (choice.equalsIgnoreCase("decrypt")) {
+            System.out.println("Enter encrypted text");
+            String encryptedText = myScanner.next();
+            System.out.println("Enter the shift key");
+            int decryptKey = myScanner.nextInt();
+        }else {
+            System.out.println("Invalid input");
+
+        }
+    }
 
 
 
@@ -17,4 +33,4 @@ public class App {
 
 
 
-}
+
