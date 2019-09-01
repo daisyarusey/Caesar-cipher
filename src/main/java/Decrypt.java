@@ -35,4 +35,8 @@ public class Decrypt {
 
         return decipher;
     }
+
+    public int getDecryptKey() {
+        return decryptKey;
+    }
 }
