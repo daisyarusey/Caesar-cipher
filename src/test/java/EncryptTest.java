@@ -8,9 +8,10 @@ public class EncryptTest {
 
     @Test
     public void encrypt_encryptText_String(){
-        Encrypt testEncrypt = new Encrypt("HI",2);
-        assertEquals("JK",testEncrypt.setCipher());
+        Encrypt testEncrypt = new Encrypt("hi hi HI",2);
+        assertEquals("jk jk JK",testEncrypt.setCipher());
     }
+
 
     @Test
     public void encrypt_instantiatesCorrectly_true() {
@@ -23,4 +24,5 @@ public class EncryptTest {
         Encrypt testError =new Encrypt("HI",28);
         assertEquals("Key must be between 0 and 25",testError.setErrorMessage());
     }
+
 }

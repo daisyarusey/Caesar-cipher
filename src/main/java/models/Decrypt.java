@@ -13,8 +13,29 @@ public class Decrypt {
         else {
             for (int i = 0; i < encryptedText.length(); i++) {
                 char ch = encryptedText.charAt(i);
-                char shifted = (char) (ch - decryptKey);
-                decipher += shifted;
+                if (Character.isLetter(ch)){
+                    if (Character.isLowerCase(ch)) {
+                        char c = (char) (ch - decryptKey);
+                        if (c > 'z') {
+                            decipher += (char) (ch - (26 + decryptKey));
+                        }
+                        else {
+                           decipher  += c;
+                        }
+                    }
+                    else if (Character.isUpperCase(ch)){
+                        char c = (char) + (ch - decryptKey);
+                        if (c >'Z'){
+                            decipher += (char)(ch -(26 + decryptKey));
+                        }
+                        else {
+                            decipher += c;
+                        }
+                    }
+                }
+                else {
+                    decipher += ch;
+                }
             }
 
         }

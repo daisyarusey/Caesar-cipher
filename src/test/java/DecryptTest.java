@@ -21,7 +21,7 @@ public class DecryptTest {
 
     @Test
     public void decrypt_decryptText_String(){
-        Decrypt testEncrypt = new Decrypt("JK",2);
-        assertEquals("HI",testEncrypt.setDecipher());
+        Decrypt testEncrypt = new Decrypt("JK jk",2);
+        assertEquals("HI hi",testEncrypt.setDecipher());
     }
 }

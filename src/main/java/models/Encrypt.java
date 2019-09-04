@@ -14,13 +14,35 @@ if (key<1 || key>25){
 }else {
     for (int i = 0; i < text.length(); i++) {
         char ch = text.charAt(i);
-        char shifted = (char) (ch + key);
-        cipher += shifted;
+        if (Character.isLetter(ch)){
+            if (Character.isLowerCase(ch)) {
+                char c = (char) (ch + key);
+                if (c > 'z') {
+                    cipher += (char) (ch - (26 - key));
+                }
+                else {
+                    cipher += c;
+                }
+            }
+            else if (Character.isUpperCase(ch)){
+                char c = (char) + (ch + key);
+                if (c >'Z'){
+                    cipher += (char)(ch -(26 - key));
+                }
+                else {
+                    cipher += c;
+                }
+            }
+        }
+        else {
+            cipher += ch;
+        }
+    }
     }
 
 }
 
-}
+
 
 
 public String setCipher(){
